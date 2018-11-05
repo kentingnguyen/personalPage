@@ -13,7 +13,7 @@ export class DefaultPage extends Component {
 
   render() {
     return (
-      <Header>Pics</Header>
+      <div /> 
     );
   }
 }

@@ -23,7 +23,7 @@ export function DefaultPage(props) {
         </header>
         <nav>
           <ul>
-          <li><Link to="blog">Blog</Link></li>
+          <li><Link to="blog">Blogr</Link></li>
           <li><Link to="pics">Pics</Link></li>
           </ul>
       </nav>

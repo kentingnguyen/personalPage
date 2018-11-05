@@ -15,13 +15,12 @@ export class DefaultPage extends Component {
   render() {
     return (
       <div>
-      <Header>Blog</Header>
       <header className="blog-default-page">
       <h1>
       Blog
        </h1>
        <p>
-         This is the Blogging section. You are on Page {this.props.blog.page}
+         This is the Blogging section. You are on Page {this.props.blog.page} 
          </p>
       </header>
       <details>

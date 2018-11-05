@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-export default function Nav(props) {
+ function Nav(props) {
   
   const links = [
     { 
@@ -26,6 +26,8 @@ export default function Nav(props) {
 
   };
 
+return <div />
+/*
     return (
       <nav>
         <ul>
@@ -36,4 +38,5 @@ export default function Nav(props) {
       </nav>
       
     );
+    */
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Header, Nav } from '../common';
 
 /*
   This is the root component of your app. Here you define the overall layout
@@ -17,6 +18,7 @@ export default function App(props) {
 
       return (
       <div className="home-app">
+        <Header />
         <div className="page-container">{props.children}</div>
       </div>
     );

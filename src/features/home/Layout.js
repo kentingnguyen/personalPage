@@ -14,7 +14,7 @@ export default function Layout(props)  {
 
     return (
       <div className="home-default-page">
-        <Header>Home</Header>
+        {/* <Header>Home</Header> */}
         <Body />
         <div className="examples-page-container">
           {props.children}
