@@ -1,0 +1,116 @@
+
+header.app-header {
+      background-color: #222;
+      height: 200px;
+      padding: 20px;
+      color: white;
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      text-align: center;
+  
+  
+  .app-logo {
+    animation: app-logo-spin infinite 10s linear;
+    height: 1px;
+    //grid-column: 2;
+    //grid-row: 1;
+  }
+
+  .app-title {
+    text-align: left;
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 3rem;
+    //float: left;
+    
+  }
+
+
+  
+
+.s_logo:first-child {
+}
+
+.s_logo:nth-child(2) {
+}
+
+
+  .rekit-logo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0.08;
+    height: 190px;
+  }
+
+
+  .app-intro {
+    font-size: large;
+  }
+
+  
+  p.memo {
+    width: 500px;
+    color: #999;
+    font-size: 12px;
+    line-height: 150%;
+    margin: auto;
+  }
+
+  nav {
+      grid-column: 2;
+      grid-row: 2;
+      
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+  ul,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+          //width: 50%;
+      margin: auto auto auto 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      margin-top: 20px;
+
+    }
+    li {
+        margin-top: 10px;
+        margin-right: 13px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px 20px;
+        font-size: 2em;
+        z-index: 5;
+
+    }
+
+    a {
+      color: #0288d1;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    } 
+  }
+  
+
+  @keyframes app-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
