@@ -14,7 +14,6 @@ export default function Layout(props)  {
 
     return (
       <div className="home-default-page">
-        {/* <Header>Home</Header> */}
         <Body />
         <div className="examples-page-container">
           {props.children}
@@ -23,7 +22,27 @@ export default function Layout(props)  {
     );
   }
 
-const Body = (props) => {
+function Body(props) {
+  return <main>
+  <h1>Kent Nguyen</h1>
+  <h2>
+  Full Stack Software Engineer
+  </h2>
+
+
+  <h1>Resume</h1>
+
+  <h1>About Me</h1>
+  I'm a 
+
+  <section>
+  blah blah
+  </section>
+
+  </main>
+}
+
+const Body2 = (props) => {
         return <div className="app-intro">
           <h3>To get started:</h3>
           <ul>

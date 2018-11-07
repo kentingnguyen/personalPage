@@ -3,36 +3,37 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Header, Nav } from '../common';
+//import { BlogNav } from './';
 
 import * as actions from './redux/actions';
 
-export class DefaultPage extends Component {
-  static propTypes = {
+export function DefaultPage(props) {
+  
+  const propTypes = {
     blog: PropTypes.object.isRequired,
     actions: PropTypes.object.isRequired,
   };
 
-  render() {
     return (
       <div>
-      <header className="blog-default-page">
       <h1>
       Blog
        </h1>
+       <button className="prevPage" onClick={props.actions.prevPage} disabled={props.blog.page < 1}>Previous Page </button>
+      <button className="nextPage" onClick={props.actions.nextPage}>Next Page </button>
+       <BlogNav prevClick={props.actions.prevPage} nextClick={props.actions.nextPage} page={props.blog.page}/> 
        <p>
-         This is the Blogging section. You are on Page {this.props.blog.page} 
+         This is the Blogging section. You are on Page {props.blog.page} 
          </p>
-      </header>
       <details>
       Random Blog Post
       </details>
       <footer>
-      <button className="prevPage" onClick={this.props.actions.prevPage} disabled={this.props.blog.page === 1}>Previous Page </button>
-      <button className="nextPage" onClick={this.props.actions.nextPage}>Next Page </button>
+      {/*<BlogNav /> */}
+
       </footer>
-      </div>
+      </div> 
     );
-  }
 }
 
 /* istanbul ignore next */
@@ -53,3 +54,17 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(DefaultPage);
+
+
+function BlogNav(props) {
+
+return <div />
+/*
+return (<div>
+    <button className="prevPage" onClick={props.prevClick} disabled={props.blog.page < 1}>Previous Page </button>
+      <button className="nextPage" onClick={props.nextClick}>Next Page </button>
+      </div>
+);
+*/
+
+}

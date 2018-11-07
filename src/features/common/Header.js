@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import reactLogo from '../../images/react-logo.svg';
 import rekitLogo from '../../images/rekit-logo.svg';
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { DocumentTitle} from './';
 
   const links = [
     { 
@@ -44,7 +45,11 @@ function HeaderTitle() {
 function H1({match}) {
   const urlKey = match.params.id || "";
   const urlLink = links.filter(link => link.key === urlKey)[0];
-  return (<h1>{urlLink.name}</h1>);
+  return (
+    <div>
+  <DocumentTitle title={urlLink.name} />
+  <h1>{urlLink.name}</h1>
+  </div>);
 }
 
 
