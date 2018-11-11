@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
-
+//depecated
  function Nav(props) {
   
   const links = [
@@ -26,17 +24,4 @@ import { Link } from 'react-router-dom';
 
   };
 
-return <div />
-/*
-    return (
-      <nav>
-        <ul>
-        {links.map((link) => {
-          return <li key={link.name} className={props.currentPage === link.name ? "highlighted" : ""}><Link to={link.to}>{link.name}</Link></li>
-        })}
-        </ul>
-      </nav>
-      
-    );
-    */
 }

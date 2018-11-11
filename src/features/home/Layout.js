@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
-import { DefaultPage } from './';
-import { Header, Nav } from '../common';
-import rekitLogo from '../../images/rekit-logo.svg';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { RESUME_TEXT } from './TextConstants';
 
 
 export default function Layout(props)  {
@@ -24,22 +22,27 @@ export default function Layout(props)  {
 
 function Body(props) {
   return <main>
-  <h1>Kent Nguyen</h1>
-  <h2>
-  Full Stack Software Engineer
-  </h2>
-
-
-  <h1>Resume</h1>
-
-  <h1>About Me</h1>
-  I'm a 
-
-  <section>
-  blah blah
-  </section>
-
+<Section header="Full Stack Software Engineer" linkName="header">
+  
+</Section>
+<Section header="Resume" linkName="Resume">
+  {RESUME_TEXT}
+</Section>
+<Section header="About Me" linkName="about">
+  Insert Text here
+</Section>
   </main>
+}
+
+
+const Section = (props) => {
+  return (
+    <section>
+      <a name="{props.linkName}" />
+      <h2>{props.header}</h2>
+        {props.children}
+    </section>
+  )
 }
 
 const Body2 = (props) => {

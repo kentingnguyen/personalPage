@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import reactLogo from '../../images/react-logo.svg';
 import rekitLogo from '../../images/rekit-logo.svg';
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Route, NavLink } from "react-router-dom";
 import { DocumentTitle} from './';
 
   const links = [
@@ -25,8 +25,7 @@ export default function Header(props) {
 
     return (
           <header className="app-header">
-            <img src={reactLogo} className="s_logo app-logo" alt="logo" />
-            <img src={rekitLogo} className="s_logo rekit-logo" alt="logo" />
+          <h1>Kent Nguyen</h1>
           <HeaderTitle />
           <Nav currentPage={props.currentPage}/>
           </header>
@@ -35,20 +34,20 @@ export default function Header(props) {
 
 function HeaderTitle() {
   return (
-          <div>
-            <Route exact path="/:id" component={H1} />
-            <Route exact path="/" render={() => <h1>Home</h1>}/>
-          </ div>
+          <div className="headerName">
+            <Route exact path="/:id" component={UrlTitle} />
+            <Route exact path="/" render={() => <h2>Home</h2>}/>
+          </div>
   )
 }
 
-function H1({match}) {
+function UrlTitle({match}) {
   const urlKey = match.params.id || "";
   const urlLink = links.filter(link => link.key === urlKey)[0];
   return (
     <div>
   <DocumentTitle title={urlLink.name} />
-  <h1>{urlLink.name}</h1>
+  <h2>{urlLink.name}</h2>
   </div>);
 }
 
