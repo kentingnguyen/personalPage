@@ -22,7 +22,7 @@ export default function Layout(props)  {
 
 function Body(props) {
   return <main>
-<Section header="Full Stack Software Engineer" linkName="header">
+<Section className="header" header="Full Stack Software Engineer" linkName="header">
   
 </Section>
 <Section header="Resume" linkName="Resume">
@@ -37,7 +37,7 @@ function Body(props) {
 
 const Section = (props) => {
   return (
-    <section>
+    <section className={props.className}>
       <a name="{props.linkName}" />
       <h2>{props.header}</h2>
         {props.children}

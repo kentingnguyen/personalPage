@@ -25,9 +25,9 @@ export default function Header(props) {
 
     return (
           <header className="app-header">
-          <h1>Kent Nguyen</h1>
-          <HeaderTitle />
-          <Nav currentPage={props.currentPage}/>
+            <h1 className="app-title">Kent Nguyen</h1>
+            <HeaderTitle />
+            <Nav currentPage={props.currentPage}/>
           </header>
     );
   }
